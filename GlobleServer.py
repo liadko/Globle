@@ -1,8 +1,8 @@
+import sys
+
 import socket, threading, time
 import random
 import shapefile
-
-port = 21567
 
 turn = 0
 
@@ -285,11 +285,17 @@ def main():
     client2 = None;
     
     print()
+    port = 21567
+    
+    
+    if(len(sys.argv) == 2):
+        port = int(sys.argv[1])
     
     server = socket.socket()
     server.bind(('0.0.0.0', port))
     server.listen()
-
+    print(f"Server Listening On <{server.getsockname()[0]}:{server.getsockname()[1]}>")
+    
     print("\nWaiting For Player 1.")
     conn1, addr = server.accept()        
 
