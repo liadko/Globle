@@ -8,10 +8,11 @@ Globle needs a couple of libraries to run:
 - pip install pyshp
 
 ### Server
-GlobleServer.py expects 1 command line argument, the port - for the communication with the clients.
+GlobleServer.py expects 1 command line argument, the port - for the communication with the clients. 
+(port is 21567 by default)
 
 ### Client
-GlobleClient.py expects 2 arguments, the server ip and the chosen port. 
+GlobleClient.py expects 2 arguments, the server ip and the previously chosen port. 
 
 # How To Play
 At the start of each game the server chooses a random country.
